@@ -1,3 +1,7 @@
 var factorial = function(number) {
-  return false;
-}
+  if (number === 0) {
+    return 1;
+  } else {
+    return false;
+  }
+};
