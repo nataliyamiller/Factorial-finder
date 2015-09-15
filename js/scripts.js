@@ -13,9 +13,15 @@ $(document).ready(function() {
     var number = parseInt($("input#number").val());
     var result = factorial(number);
 
-    $(".number").text(number);
-    $(".factorial").text(result);
-    $("#result").show();
+    if (result) {
+      $(".number").text(number);
+      $(".factorial").text(result);
+      $("#result").show();
+      $("#negative-number").hide();
+    } else if (!result) {
+      $("#result").hide();
+      $("#negative-number").show();
+    }
     event.preventDefault();
   });
 });
