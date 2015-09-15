@@ -7,3 +7,15 @@ var factorial = function(number) {
     return false;
   }
 };
+
+$(document).ready(function() {
+  $("form#input-number").submit(function(event) {
+    var number = parseInt($("input#number").val());
+    var result = factorial(number);
+
+    $(".number").text(number);
+    $(".factorial").text(result);
+    $("#result").show();
+    event.preventDefault();
+  });
+});
