@@ -1,5 +1,5 @@
 describe('factorial', function() {
-  it("is false for a number that is not a factorial of a given number", function() {
+  it("is false for a negative number", function() {
     expect(factorial(-2)).to.equal(false);
   });
 
